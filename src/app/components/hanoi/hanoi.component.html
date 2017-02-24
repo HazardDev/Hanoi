@@ -6,6 +6,9 @@
   <label>Iterations: {{iterations}}</label>
   <br>
   <button class="btn btn-success" (click)="hanoi()">Run Hanoi</button>
+  <br>
+  <button class="btn btn-info" (click)="printArr()">Log Arrays</button>
+  
 </div>
 
 <br><br>
@@ -18,10 +21,10 @@
 			<div [hidden]="!A.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of A.reverse()"></div>
 		</div>
 		<div class="hanoi-tower" [style.width.px]="disks * 20">
-			<div [hidden]="!B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of B"></div>
+			<div [hidden]="!B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of B.reverse()"></div>
 		</div>
 		<div class="hanoi-tower" [style.width.px]="disks * 20">
-			<div [hidden]="!C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of C"></div>
+			<div [hidden]="!C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of C.reverse()"></div>
 		</div>
 	</div>
 

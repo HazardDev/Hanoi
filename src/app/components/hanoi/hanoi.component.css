@@ -1,0 +1,14 @@
+.hanoi-block {
+  background: #FACA04;
+  outline: solid 1px black;
+  height: 15px;
+  margin-bottom: 1px;
+}
+
+.hanoi-view {
+	display: inline-flex;
+}
+
+.hanoi-tower {
+	/*position: relative;*/
+}

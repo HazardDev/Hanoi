@@ -1,0 +1,28 @@
+<div>
+  <label>Disk Count: <input [(ngModel)]="disks" type="text"></label>
+  <br>
+  <label>Delay (seconds):  <input type="number" [(ngModel)]="seconds"/></label>
+  <br>
+  <label>Iterations: {{iterations}}</label>
+  <br>
+  <button class="btn btn-success" (click)="hanoi()">Run Hanoi</button>
+</div>
+
+<br><br>
+
+<div>
+	<label>Hanoi Display</label>
+	<br>
+	<div class="hanoi-view" >
+		<div class="hanoi-tower" [style.width.px]="disks * 20">
+			<div [hidden]="!A.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of A.reverse()"></div>
+		</div>
+		<div class="hanoi-tower" [style.width.px]="disks * 20">
+			<div [hidden]="!B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of B"></div>
+		</div>
+		<div class="hanoi-tower" [style.width.px]="disks * 20">
+			<div [hidden]="!C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of C"></div>
+		</div>
+	</div>
+
+</div>

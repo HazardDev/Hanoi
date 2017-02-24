@@ -15,12 +15,13 @@ export class HanoiComponent {
 	A = []
 	B = []
 	C = []
+	viewState = [{A: [], B: [], C: []}]
 	seconds: number = 1;
 	doHanoi = function (disks: number, source: Array<number>, using: Array<number>, destination: Array<number>, ) {
 				//console.log(this.iterations);
 				this.iterations++;
 				if (disks == 1) {
-						this.move(source, destination);
+					this.move(source, destination);
 					return;
 				}
 				this.doHanoi(disks - 1, source, destination, using);
@@ -30,9 +31,8 @@ export class HanoiComponent {
 	}
 
 	move = function (source: Array<number>, destination: Array<number>) {
-		setTimeout(() => {
-			destination.unshift(source.shift());
-		}, this.seconds * this.iterations * 1000)
+		this.viewState.push({A: this.A.slice(), B: this.B.slice(), C: this.C.slice()});
+		destination.unshift(source.shift());
 	}
 
 	populate = function (top: number): Array<number> {
@@ -49,6 +49,7 @@ export class HanoiComponent {
 		this.A = this.populate(this.disks);
 		this.B = []
 		this.C = []
+		this.viewState = [{A: [], B: [], C: []}]
 		this.doHanoi(this.disks, this.A, this.B, this.C);
 	}
 
@@ -56,5 +57,21 @@ export class HanoiComponent {
 		console.log(this.A);
 		console.log(this.B);
 		console.log(this.C);
+		console.log(this.viewState);
+
+	}
+
+	changeView = function () {
+		console.log("Change View Called");
+		console.log(this.viewState);
+		console.log(this.viewState.length);
+		for(let i = 0; i < this.viewState.length; i++){
+			console.log("In the for loop");
+			setTimeout(() => {
+				console.log("In the timeout")
+				console.log(this.viewState);
+				this.viewState.shift();
+			}, 1000 * this.seconds * i);
+		}
 	}
 }

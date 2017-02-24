@@ -9,3 +9,7 @@
 	display: inline-flex;
   /*transform: rotateX(180deg);*/
 }
+
+.hanoi-tower {
+  margin-right: 5px;
+}

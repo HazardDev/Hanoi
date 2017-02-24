@@ -7,5 +7,6 @@
 
 .hanoi-view {
 	display: inline-flex;
+  /*transform: rotateX(180deg);*/
 }
 

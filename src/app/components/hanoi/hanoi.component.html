@@ -18,13 +18,13 @@
 	<br>
 	<div class="hanoi-view" >
 		<div class="hanoi-tower" [style.width.px]="disks * 20">
-			<div [hidden]="!A.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of A.reverse()"></div>
+			<div [hidden]="!A.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of A"></div>
 		</div>
 		<div class="hanoi-tower" [style.width.px]="disks * 20">
-			<div [hidden]="!B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of B.reverse()"></div>
+			<div [hidden]="!B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of B"></div>
 		</div>
 		<div class="hanoi-tower" [style.width.px]="disks * 20">
-			<div [hidden]="!C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of C.reverse()"></div>
+			<div [hidden]="!C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of C"></div>
 		</div>
 	</div>
 

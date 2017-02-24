@@ -31,14 +31,14 @@ export class HanoiComponent {
 
 	move = function (source: Array<number>, destination: Array<number>) {
 		setTimeout(() => {
-			destination.unshift(source.shift());
+			destination.push(source.pop());
 		}, 1000)
 	}
 
 	populate = function (top: number): Array<number> {
 		let returnMe: Array<number> = [];
 		for (let i: number = top; i > 0; i--) {
-			returnMe.push(i);
+			returnMe.unshift(i);
 		}
 		return returnMe;
 	}

@@ -31,8 +31,8 @@ export class HanoiComponent {
 
 	move = function (source: Array<number>, destination: Array<number>) {
 		setTimeout(() => {
-			destination.push(source.pop());
-		}, 1000)
+			destination.unshift(source.shift());
+		}, this.seconds * this.iterations * 1000)
 	}
 
 	populate = function (top: number): Array<number> {

@@ -1,19 +1,20 @@
-<div>
-  <label>Disk Count: <input min="1" type="number" [(ngModel)]="disks" type="text"></label>
-  <br>
-  <label>Delay (seconds):  <input min="0" type="number" [(ngModel)]="seconds"/></label>
-  <br>
-  <label>Iterations: {{iterations}}</label>
-  <br>
-  <button class="btn btn-success" (click)="hanoi()">Do Hanoi</button>
-  <!--<br>
-  <button class="btn btn-info" (click)="printArr()">Log Arrays</button>-->
+<div >
+	<div class="input-group">
+		<input class="form-control" placeholder="Delay" min="0" type="number" aria-describedby="basic-addon2" [(ngModel)]="seconds"/>
+		<span class="input-group-addon" id="basic-addon2">Seconds</span>
+	</div>	
+	<br>
+	<div class="input-group">
+		<input class="form-control" placeholder="Disks" min="1" type="number" [(ngModel)]="disks">
+		<span class="input-group-btn">
+        <button class="btn btn-secondary" (click)="hanoi()" type="button">Go!</button>
+  		</span>
+	</div>
 </div>
 
 <br><br>
 
 <div>
-	<label>Hanoi Display</label>
 	<br>
 	<div class="hanoi-view" [style.height.px]="disks * 16">
 		<div class="hanoi-tower"  [style.width.px]="disks * 20">

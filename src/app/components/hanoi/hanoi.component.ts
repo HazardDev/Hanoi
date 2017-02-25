@@ -15,6 +15,7 @@ export class HanoiComponent {
 	A = []
 	B = []
 	C = []
+	hanoiRunning = false;
 	viewState = [{A: [], B: [], C: []}]
 	seconds: number = 1;
 	doHanoi = function (disks: number, source: Array<number>, using: Array<number>, destination: Array<number>, ) {

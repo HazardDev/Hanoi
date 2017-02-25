@@ -1,5 +1,5 @@
 <div>
-  <label>Disk Count: <input [(ngModel)]="disks" type="text"></label>
+  <label>Disk Count: <input min="0" type="number" [(ngModel)]="disks" type="text"></label>
   <br>
   <label>Delay (seconds):  <input min="0" type="number" [(ngModel)]="seconds"/></label>
   <br>

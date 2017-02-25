@@ -2,7 +2,7 @@
   background: #FACA04;
   outline: solid 1px black;
   height: 15px;
-  margin-bottom: 1px;
+  margin: auto auto 1px auto;
 }
 
 .hanoi-view {
@@ -12,4 +12,5 @@
 
 .hanoi-tower {
   margin-right: 5px;
+  margin-left: 5px;
 }

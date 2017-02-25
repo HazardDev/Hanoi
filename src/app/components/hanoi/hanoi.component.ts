@@ -51,6 +51,8 @@ export class HanoiComponent {
 		this.C = []
 		this.viewState = [{A: [], B: [], C: []}]
 		this.doHanoi(this.disks, this.A, this.B, this.C);
+		this.viewState.push({A: [], B: [], C: this.C.slice()});
+		this.changeView();
 	}
 
 	printArr = function () {
@@ -65,12 +67,12 @@ export class HanoiComponent {
 		console.log("Change View Called");
 		console.log(this.viewState);
 		console.log(this.viewState.length);
-		for(let i = 0; i < this.viewState.length; i++){
-			console.log("In the for loop");
+		for(let i = 0; i < this.viewState.length - 1; i++){
+			console.log("In the for loop.");
 			setTimeout(() => {
-				console.log("In the timeout")
-				console.log(this.viewState);
+
 				this.viewState.shift();
+				
 			}, 1000 * this.seconds * i);
 		}
 	}

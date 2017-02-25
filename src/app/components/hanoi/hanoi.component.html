@@ -15,14 +15,14 @@
 <div>
 	<label>Hanoi Display</label>
 	<br>
-	<div class="hanoi-view" >
-		<div class="hanoi-tower" [style.height.px]="disks * 16" [style.width.px]="disks * 20">
+	<div class="hanoi-view" [style.height.px]="disks * 16">
+		<div class="hanoi-tower"  [style.width.px]="disks * 20">
 			<div [hidden]="!viewState[0].A.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of viewState[0].A"></div>
 		</div>
-		<div class="hanoi-tower" [style.height.px]="disks * 16" [style.width.px]="disks * 20">
+		<div class="hanoi-tower" [style.width.px]="disks * 20">
 			<div [hidden]="!viewState[0].B.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of viewState[0].B"></div>
 		</div>
-		<div class="hanoi-tower" [style.height.px]="disks * 16" [style.width.px]="disks * 20">
+		<div class="hanoi-tower" [style.width.px]="disks * 20">
 			<div [hidden]="!viewState[0].C.includes(item) && item !== undefined" [style.width.px]="item * 20" class="hanoi-block" *ngFor="let item of viewState[0].C"></div>
 		</div>
 	</div>

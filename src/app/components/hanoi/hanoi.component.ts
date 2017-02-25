@@ -15,7 +15,7 @@ export class HanoiComponent {
 	A = []
 	B = []
 	C = []
-	hanoiRunning = false;
+	isRunning: boolean = false;
 	viewState = [{A: [], B: [], C: []}]
 	seconds: number;
 	doHanoi = function (disks: number, source: Array<number>, using: Array<number>, destination: Array<number>, ) {
@@ -46,6 +46,8 @@ export class HanoiComponent {
 
 	hanoi = function () {
 		// console.log("Running Hannoi");
+		if(this.isRunning) return;
+		this.isRunning = true;
 		this.iterations = 0;
 		if(!this.disks) this.disks = 6;
 		this.A = this.populate(this.disks);
@@ -72,8 +74,11 @@ export class HanoiComponent {
 		for(let i = 0; i < this.viewState.length - 1; i++){
 			// console.log("In the for loop.");
 			setTimeout(() => {
-
+			
 				this.viewState.shift();
+				if(this.viewState.length == 1){
+					this.isRunning = false;
+				}
 				
 			}, 1000 * this.seconds * i);
 		}

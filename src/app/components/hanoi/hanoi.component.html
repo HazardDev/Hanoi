@@ -1,4 +1,4 @@
-<div style="width: 40%;" class="mx-auto">
+<div class="mx-auto control-section">
 	<div class="input-group">
 		<input class="form-control" placeholder="Delay" min="0" type="number" aria-describedby="basic-addon2" [(ngModel)]="seconds"/>
 		<span class="input-group-addon" id="basic-addon2">Seconds</span>
@@ -7,14 +7,13 @@
 	<div class="input-group">
 		<input class="form-control" placeholder="Disks" min="1" type="number" [(ngModel)]="disks">
 		<span class="input-group-btn">
-        <button class="btn btn-secondary" (click)="hanoi()" type="button">Go!</button>
+        <button class="btn" [ngClass]="{'btn-success': !isRunning, 'btn-secondary': isRunning}" (click)="hanoi()" type="button">Go!</button>
   		</span>
 	</div>
 </div>
 
-<br><br>
 
-<div>
+<div class="working-area" [style.width.px]="(disks * 20 * 3) + 20">
 	<br>
 	<div class="hanoi-view" [style.height.px]="disks * 16">
 		<div class="hanoi-tower"  [style.width.px]="disks * 20">

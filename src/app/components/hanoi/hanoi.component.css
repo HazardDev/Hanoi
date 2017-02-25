@@ -12,11 +12,23 @@
   align-items: flex-end;
   justify-content: center;
   align-content: stretch;
-  background: rgba(171, 253, 17, .7);
-  outline: solid 5px rgba(171, 253, 17, .75);
+  /*background: rgba(171, 253, 17, .7);
+  outline: solid 5px rgba(171, 253, 17, .75);*/
 }
 
 .hanoi-tower {
   margin-right: 5px;
   margin-left: 5px;
+}
+
+.control-section {
+  width: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.working-area {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

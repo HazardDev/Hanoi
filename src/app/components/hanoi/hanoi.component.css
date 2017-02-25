@@ -12,6 +12,8 @@
   align-items: flex-end;
   justify-content: center;
   align-content: stretch;
+  background: rgba(171, 253, 17, .7);
+  outline: solid 5px rgba(171, 253, 17, .75);
 }
 
 .hanoi-tower {

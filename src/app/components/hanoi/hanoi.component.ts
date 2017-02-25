@@ -20,14 +20,14 @@ export class HanoiComponent {
 	seconds: number;
 	doHanoi = function (disks: number, source: Array<number>, using: Array<number>, destination: Array<number>, ) {
 				//console.log(this.iterations);
-				this.iterations++;
-				if (disks == 1) {
-					this.move(source, destination);
-					return;
-				}
-				this.doHanoi(disks - 1, source, destination, using);
-				this.move(source, destination);
-				this.doHanoi(disks - 1, using, source, destination);
+		this.iterations++;
+		if (disks == 1) {
+			this.move(source, destination);
+			return;
+		}
+		this.doHanoi(disks - 1, source, destination, using);
+		this.move(source, destination);
+		this.doHanoi(disks - 1, using, source, destination);
 
 	}
 
@@ -47,6 +47,7 @@ export class HanoiComponent {
 	hanoi = function () {
 		// console.log("Running Hannoi");
 		this.iterations = 0;
+		if(!this.disks) this.disks = 6;
 		this.A = this.populate(this.disks);
 		this.B = []
 		this.C = []

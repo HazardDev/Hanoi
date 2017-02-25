@@ -44,7 +44,7 @@ export class HanoiComponent {
 	}
 
 	hanoi = function () {
-		console.log("Running Hannoi");
+		// console.log("Running Hannoi");
 		this.iterations = 0;
 		this.A = this.populate(this.disks);
 		this.B = []
@@ -60,15 +60,15 @@ export class HanoiComponent {
 		console.log(this.B);
 		console.log(this.C);
 		console.log(this.viewState);
-
+		//For debugging purposes
 	}
 
 	changeView = function () {
-		console.log("Change View Called");
-		console.log(this.viewState);
-		console.log(this.viewState.length);
+		// console.log("Change View Called");
+		// console.log(this.viewState);
+		// console.log(this.viewState.length);
 		for(let i = 0; i < this.viewState.length - 1; i++){
-			console.log("In the for loop.");
+			// console.log("In the for loop.");
 			setTimeout(() => {
 
 				this.viewState.shift();

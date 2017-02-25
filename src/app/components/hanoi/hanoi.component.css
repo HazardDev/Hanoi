@@ -3,6 +3,7 @@
   outline: solid 1px black;
   height: 15px;
   margin: auto auto 1px auto;
+  bottom: 0px;
 }
 
 .hanoi-view {

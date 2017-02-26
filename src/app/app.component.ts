@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Towers Of Hanoi Visualizer!';
+  title = 'Towers Of Hanoi';
+  subtitle = 'A Visualizer';
 }

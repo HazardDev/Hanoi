@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HanoiComponent } from './components/hanoi/hanoi.component';
+import { AlertModule } from 'ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HanoiComponent } from './components/hanoi/hanoi.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

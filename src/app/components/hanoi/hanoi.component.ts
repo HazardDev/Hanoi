@@ -11,13 +11,13 @@ export class HanoiComponent {
 	constructor(private zone: NgZone){}
 
 	iterations: number = 0;
-	disks: number ;
+	disks: number = 2;
 	A = []
 	B = []
 	C = []
 	isRunning: boolean = false;
 	viewState = [{A: [], B: [], C: []}]
-	seconds: number;
+	seconds: number = 1;
 	doHanoi = function (disks: number, source: Array<number>, using: Array<number>, destination: Array<number>, ) {
 				//console.log(this.iterations);
 		this.iterations++;

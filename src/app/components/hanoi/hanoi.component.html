@@ -1,15 +1,27 @@
 <div class="mx-auto control-section">
 	<div class="input-group">
+		<span class="input-group-addon" id="basic-addon1">
+			Delay
+  		</span>
 		<input class="form-control" placeholder="Delay" min="0" type="number" aria-describedby="basic-addon2" [(ngModel)]="seconds"/>
 		<span class="input-group-addon" id="basic-addon2">Seconds</span>
 	</div>	
 	<br>
-	<div class="input-group">
+	<div class="input-group has-danger">
+		<!--<span class="input-group-addon" id="basic-addon1">
+			Steps <span class="badge badge-info">{{iterations}}</span>
+  		</span>-->
+		<span class="input-group-addon" id="basic-addon1">
+			Disks
+  		</span>
 		<input class="form-control" placeholder="Disks" min="1" type="number" [(ngModel)]="disks">
+		<!--<div class="form-control-feedback">Careful, anything above 16 may take a long time to calculate.</div>-->
 		<span class="input-group-btn">
         <button class="btn" [ngClass]="{'btn-success': !isRunning, 'btn-secondary': isRunning}" (click)="hanoi()" type="button">Go!</button>
   		</span>
 	</div>
+	<alert [hidden]="disks < 16 || disks > 26 || isRunning" type="warning" dismissible="true">Careful, having {{disks}} disks may take a long time to compute.</alert>
+	<alert [hidden]="disks < 27 || isRunning" type="danger" dismissible="true">Careful, having {{disks}} disks may crash your browser.</alert>
 </div>
 
 

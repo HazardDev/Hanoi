@@ -2,7 +2,7 @@
   background: #FACA04;
   outline: solid 1px black;
   height: 15px;
-  margin: auto auto 1px auto;
+  margin: 1px auto 1px auto;
   bottom: 0px;
 }
 
@@ -16,10 +16,10 @@
   outline: solid 5px rgba(171, 253, 17, .75);*/
 }
 
-.hanoi-tower {
+/*.hanoi-tower {
   margin-right: 5px;
   margin-left: 5px;
-}
+}*/
 
 .control-section {
   width: auto;
@@ -31,4 +31,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  /*background: rgb(238, 238, 238);
+  outline: solid 4px rgb(210, 210, 210);*/
+  margin-top: 3%;
+  padding: 2%;
 }
